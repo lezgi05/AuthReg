@@ -1,0 +1,53 @@
+.btn_auth {
+    border: none;
+    background-color: rgb(97, 97, 247);
+    color: white;
+}
+
+.btn_auth:hover {
+    color: white;
+}
+
+.border-bottom-custom {
+    border-bottom: 3px solid rgb(97, 97, 247);
+    border-radius: 0px;
+    color: rgb(97, 97, 247);
+}
+
+.border-bottom-custom:hover {
+    color: rgb(97, 97, 247);
+    background-color: rgba(97, 97, 247, 0.10);
+}
+
+.btn:focus,
+.btn:active,
+.btn:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.text-blue {
+    color: rgb(97, 97, 247);
+}
+
+.color-light {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.color-light:hover {
+    color: rgba(0, 0, 0, 0.6);
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity)) !important;
+}
+
+.btn-eye {
+    position:absolute;
+    z-index: 1000;
+    top: 7px;
+    left: 254px;
+    border-radius: 50%;
+}
+
+.btn-eye:hover {
+    background-color: rgba(97, 97, 247, 0.10);
+}
