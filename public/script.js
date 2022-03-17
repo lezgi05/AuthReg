@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (input.value.length != selectionStart) {
-            console.log('редактирование в середине строки', e);
             if (e.data && /\D/g.test(e.data)) {
                 input.value = inputNumbersValue;
             }
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
             // Russian phone number
             if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
-            let firstSymbols = (inputNumbersValue[0] == 8) ? "8" : "+7";
+            let firstSymbols = (inputNumbersValue[0] == 8) ? "+7" : "+7";
             formattedInputValue = firstSymbols + " ";
             if (inputNumbersValue > 1) {
                 formattedInputValue += "(" + inputNumbersValue.substring(1, 4);
@@ -48,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     let onPhoneKeyDown = function(e) {
-        console.log(e.keyCode, e.target.value);
         let input = e.target
         if (e.keyCode == 8 && getInputNumbersValue(input).length == 1) {
             input.value = "";
