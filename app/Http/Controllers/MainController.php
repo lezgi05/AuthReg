@@ -9,4 +9,5 @@ class MainController extends Controller
     public function welcome() {
         return view('welcome');
     }
+    
 }

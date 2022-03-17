@@ -15,34 +15,41 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active pt-2" id="home" role="tabpanel" aria-labelledby="login_tab">
-                        <form action="#" class="d-flex flex-column px-4 mt-3">
+                        <form action="/login" method="post" class="d-flex flex-column px-4 mt-3">
+                            @csrf
                             <div class="form-floating mb-3">
-                                <input type="tel" data-tel-input class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="tel" name="tel" data-tel-input class="form-control" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput" class="text-muted"><i class="bi bi-telephone"></i> Телефон</label>
+                                @error('tel')<div class="text-danger">{{$message}}</div> @enderror         
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="input_one" placeholder="name@example.com">
+                                <input type="password" name="password" class="form-control" id="input_one" placeholder="name@example.com">
                                 <div id="show_one" onclick="show(this.id,'input_one')" class="btn btn-eye"><i class="bi bi-eye text-blue fs-5"></i></div>
                                 <label for="input_one" class="text-muted">Введите пароль</label>
+                                @error('password')<div class="text-danger">{{$message}}</div>@enderror
                             </div>
                             <button class="btn-lg btn_auth"><i class="bi bi-box-arrow-in-right"></i> Войти</button>
                         </form>
                     </div>
                     <div class="tab-pane fade pt-2" id="profile" role="tabpanel" aria-labelledby="reg_tab">
-                        <form action="#" class="d-flex flex-column px-4 mt-3">
+                        <form action="/registr" method="post" class="d-flex flex-column px-4 mt-3">
+                            @csrf
                             <div class="form-floating mb-3">
-                                <input type="tel" data-tel-input class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="tel" name="tel" data-tel-input class="form-control" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput" class="text-muted"><i class="bi bi-telephone"></i> Телефон</label>
+                                @error('tel')<div class="text-danger">{{$message}}</div> @enderror
                             </div>                            
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="input_two" placeholder="name@example.com">
+                                <input type="password" name="password" class="form-control" id="input_two" placeholder="name@example.com">
                                 <div id="show_two" onclick="show(this.id,'input_two')" class="btn btn-eye"><i class="bi bi-eye text-blue fs-5"></i></div>
                                 <label for="password_input_two" class="text-muted">Придумайте пароль</label>
+                                @error('password')<div class="text-danger">{{$message}}</div>@enderror
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="input_three" placeholder="name@example.com">
+                                <input type="password" name="password_confirmation" class="form-control" id="input_three" placeholder="name@example.com">
                                 <div id="show_three" onclick="show(this.id,'input_three')" class="btn btn-eye"><i class="bi bi-eye text-blue fs-5"></i></div>
                                 <label for="input_three" class="text-muted">Повторите пароль</label>
+                                @error('password_confirmation')<div class="text-danger">{{$message}}</div> @enderror
                             </div>      
                             <button class="btn-lg btn_auth"><i class="bi bi-box-arrow-in-right"></i>  Зарегистрироваться</button>
                         </form>
