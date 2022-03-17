@@ -13,6 +13,8 @@
     <link href="/style.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-    @yield('content')    
+    @yield('content')   
+    
+<script src="/script.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@
                     <div class="tab-pane fade show active pt-2" id="home" role="tabpanel" aria-labelledby="login_tab">
                         <form action="#" class="d-flex flex-column px-4 mt-3">
                             <div class="form-floating mb-3">
-                                <input type="tel" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="tel" data-tel-input class="form-control" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput" class="text-muted"><i class="bi bi-telephone"></i> Телефон</label>
                             </div>
                             <div class="form-floating mb-3">
@@ -31,7 +31,7 @@
                     <div class="tab-pane fade pt-2" id="profile" role="tabpanel" aria-labelledby="reg_tab">
                         <form action="#" class="d-flex flex-column px-4 mt-3">
                             <div class="form-floating mb-3">
-                                <input type="tel" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <input type="tel" data-tel-input class="form-control" id="floatingInput" placeholder="name@example.com">
                                 <label for="floatingInput" class="text-muted"><i class="bi bi-telephone"></i> Телефон</label>
                             </div>                            
                             <div class="form-floating mb-3">
